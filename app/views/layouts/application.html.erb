@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WaqasLight</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div>
+<%= image_tag 'logo.jpg'%>
+</div>
+
+    <div class="navbar navbar-default navbar-static-top">
+
+      <div class="navbar-inner">
+        <div class="container">
+          <div class="nav-collapse">
+            <ul class="nav" >
+            <a class="brand" href= '/' style="color: #fff;">Home</a>
+              <li><%= link_to "About Us",'' ,style: "color: #fff;"%></li>
+              
+              <li><%= link_to "Price Index",'' ,style: "color: #fff;"%></li>
+              <li><%= link_to "Contact Us",'' ,style: "color: #fff;"%></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+
+<%= yield %>
+
+</body>
+</html>
