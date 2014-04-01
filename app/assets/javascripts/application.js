@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require parsley
+//= require parsley.extend
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
