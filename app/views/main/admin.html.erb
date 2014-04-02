@@ -1,12 +1,2 @@
-		<%= form_tag new_admin_session_path, :method => 'post', "data-validate" => "parsley" do%>
-
-		<div class="control">
-			<%= text_field_tag 'email','', "placeholder"=> 'Email', 'data-required'=>'true'%>
-		</div>
-		<div class="control">
-			<%= text_field_tag 'message','', "placeholder"=> 'Message', 'data-required'=>'true'%>
-		</div>
-		<div class="control">
-			<%= submit_tag 'submit', :class=>'btn btn-primary'%>
-		</div>
-		<%end%>
+<h2> <%= link_to 'Categories',admin_categories_path%></h2>
+<h2> <%= link_to 'Products',admin_products_path%></h2>

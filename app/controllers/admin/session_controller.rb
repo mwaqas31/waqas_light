@@ -5,7 +5,7 @@ class Admin::SessionController < ApplicationController
 			flash[:error] = 'No such user'
 			render 'new' and return
 		else
-			session[:current_user] = us.id
+			session[:current_user_id] = us.id
 			redirect_to admin_path and return
 		end
 	end
