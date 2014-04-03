@@ -1,0 +1,5 @@
+<%@categories.each  do |cat|%>
+<%=link_to 'Edit',edit_admin_category_path(cat) %>, <%=link_to 'Edit',admin_category_path(cat),:confirm => "Are you sure?", :method => :delete %>
+<%end%>
+
+<%= link_to 'Add new Category', new_admin_category_path, :class =>'btn btn-green'%>

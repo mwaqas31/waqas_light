@@ -8,13 +8,22 @@ class Admin::CategoriesController < ApplicationController
 
 	def edit
 		@category = Category.find(params[:id])
+		@category.update_attributes(params[:category])
+		flash[:success] = 'Updated successfully'
+		redirect_to admin_categories_path
+
 	end
 
 
 	def new
 		@category = Category.new
+	end
 
-
+	def create
+		@category = Category.new(params[:category])
+		@category.save
+		flash[:success] = 'Created successfully'
+		redirect_to admin_categories_path
 	end
 
 

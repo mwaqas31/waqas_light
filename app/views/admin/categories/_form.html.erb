@@ -1,0 +1,3 @@
+<%= form_for [:admin,@category], :html => {'data-validate' => 'parsley'} do |f|%>
+Name:  <%= f.text_field :name, 'data-required' => 'true'%>
+<%end%>

@@ -32,10 +32,18 @@ gem 'jbuilder', '~> 1.2'
 	
   gem 'bootstrap-sass', '2.3.2.0'
 
+
+
+group :development do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'debugger'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

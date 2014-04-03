@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
   	else
   		return nil
   	end
+  end
 
   	def required_login
   		redirect_to root_path and return if current_user.blank?

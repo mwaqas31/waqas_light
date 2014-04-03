@@ -1,0 +1,3 @@
+<%@products.each  do |product|%>
+<%=link_to 'Edit',edit_admin_product_path(product) %>, <%=link_to 'Edit',admin_product_path(product),:confirm => "Are you sure?", :method => :delete %>
+<%end%>
