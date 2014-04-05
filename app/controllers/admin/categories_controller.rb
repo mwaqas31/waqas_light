@@ -8,6 +8,11 @@ class Admin::CategoriesController < ApplicationController
 
 	def edit
 		@category = Category.find(params[:id])
+		
+	end
+
+	def update
+		@category = Category.find(params[:id])
 		@category.update_attributes(params[:category])
 		flash[:success] = 'Updated successfully'
 		redirect_to admin_categories_path
@@ -20,7 +25,8 @@ class Admin::CategoriesController < ApplicationController
 	end
 
 	def create
-		@category = Category.new(params[:category])
+		@category = Category.new(category_params)
+
 		@category.save
 		flash[:success] = 'Created successfully'
 		redirect_to admin_categories_path
@@ -29,6 +35,13 @@ class Admin::CategoriesController < ApplicationController
 
 	def show
 		@category = Category.find(params[:id])
+	end
+
+
+	private
+
+	def category_params
+		params.require(:category).permit(:name)
 	end
 
 end

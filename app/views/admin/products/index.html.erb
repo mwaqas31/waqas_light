@@ -1,3 +1,33 @@
-<%@products.each  do |product|%>
-<%=link_to 'Edit',edit_admin_product_path(product) %>, <%=link_to 'Edit',admin_product_path(product),:confirm => "Are you sure?", :method => :delete %>
-<%end%>
+<table>
+	<tr>
+		<td style="width: 100px;"><strong>Name</strong></td>
+		<td style="width: 100px;"><strong>Description</strong></td>
+		<td style="width: 100px;"><strong>Cateory</strong></td>
+		<td style="width: 100px;"><strong>Action</strong></td>
+	</tr>
+
+	<%@products.each  do |product|%>
+	<tr>
+		<td style="width: 100px;">
+			<%= product.name%>
+		</td>
+
+		<td style="width: 100px;">
+			<%= product.description%>
+		</td>
+
+		<td style="width: 100px;">
+			<%=product.category.name rescue 'Category Deleted'%>
+		</td>
+
+		<td style="width: 100px;">
+			<%=link_to 'Edit',edit_admin_product_path(product) %>, <%=link_to 'Delete',admin_product_path(product),:confirm => "Are you sure?", :method => :delete %>
+		</td>
+
+		<%end%>
+	</tr>
+</table>
+
+
+
+<%= link_to 'Add new Product', new_admin_product_path, :class =>'btn btn-green'%>

@@ -1,0 +1,40 @@
+<%= form_for [:admin,@product], :html => {'data-validate' => 'parsley'} do |f|%>
+
+<table>
+	<tr>
+		<td>
+			Name:
+		</td>
+		<td>
+			<%= f.text_field :name, 'data-required' => 'true'%></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Category:
+		</td>
+		<td>
+			<%= f.select :category_id,options_for_select(Category.all.collect {|cat| [cat.name,cat.id]}, @product.category_id)%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Price:
+		</td>
+		<td>
+			<%= f.text_field :price, 'data-required' =>'true', 'data-type'=> 'numbers'%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Description:
+		</td>
+
+		<td>
+			<%= f.text_field :description,'data-required' => 'true'%>
+		</td>
+	</tr>
+</table>
+<%= f.file_field :image%>
+<%= submit_tag 'submit', :class => 'btn btn-primary'%>
+<%end%>
