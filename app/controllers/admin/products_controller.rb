@@ -32,6 +32,13 @@ class Admin::ProductsController < ApplicationController
 		redirect_to admin_products_path
 	end
 
+	def destroy
+		@product = Product.find(params[:id])
+		@product.destroy
+		flash[:success] = 'Deleted successfully'
+		redirect_to admin_products_path
+	end
+
 
 	def show
 		@product = Product.find(params[:id])
@@ -41,7 +48,7 @@ class Admin::ProductsController < ApplicationController
 	private
 
 	def product_params
-		params.require(:product).permit(:name,:image,:description,:price)
+		params.require(:product).permit(:name,:image,:description,:price,:category_id)
 	end
 
 end

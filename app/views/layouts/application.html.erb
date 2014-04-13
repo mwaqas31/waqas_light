@@ -8,29 +8,29 @@
 </head>
 <body>
 
-<div>
-<%= image_tag 'logo.jpg'%>
-</div>
-
-    <div class="navbar navbar-default navbar-static-top">
-
-      <div class="navbar-inner">
-        <div class="container">
-          <div class="nav-collapse">
-            <ul class="nav" >
-            <a class="brand" href= '/' style="color: #ffc;">Home</a>
-              <li><%= link_to "About Us",about_us_path ,style: "color: #ffc;"%></li>
-              
-              <li><%= link_to "Price Index",pricing_path ,style: "color: #ffc;"%></li>
-              <li><%= link_to "Contact Us",contact_us_path ,style: "color: #ffc;"%></li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
+  <div>
+    <%= image_tag 'logo.jpg'%>
   </div>
 
-<%= yield %>
+  <div class="navbar navbar-default navbar-static-top">
+
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="nav-collapse">
+          <ul class="nav" >
+            <a class="brand" href= '/' style="color: #ffc;">Home</a>
+            <li><%= link_to "About Us",about_us_path ,style: "color: #ffc;"%></li>
+
+            <li><%= link_to "Price Index",pricing_path ,style: "color: #ffc;"%></li>
+            <li><%= link_to "Contact Us",contact_us_path ,style: "color: #ffc;"%></li>
+            <li><%= link_to "Admin",admin_path ,style: "color: #ffc;" unless current_user.blank?%></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= yield %>
 
 </body>
 </html>

@@ -30,3 +30,18 @@ background: linear-gradient(#005bab, blue); /* Standard syntax (must be last) */
 .container{
 	width: 990px;
 }
+.categories-container{
+	-moz-box-sizing: border-box;
+}
+.btn-green{
+	
+	color: #fff;
+
+	background-image: linear-gradient(to bottom, #3ec7ad,#2fa38d);
+	background-repeat: repeat-x;
+}
+.product-image-div{
+	height: 306px;
+	width: 230px;
+	display: inline;
+}
