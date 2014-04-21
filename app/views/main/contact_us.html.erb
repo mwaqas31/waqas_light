@@ -13,7 +13,7 @@
 		<p>
 			Feel free to contact us by telephone, fax or by emailing directly on sales@asglighting.com Alternatively you can use the form below.
 		</p>
-		<%= form_tag '', :method => 'post', "data-validate" => "parsley" do%>
+		<%= form_tag contact_us_mailer_path, :method => 'post', "data-validate" => "parsley" do%>
 		<div class="control">
 			<%= text_field_tag 'name','', "placeholder"=> 'Full Name', 'data-required'=>'true'%>
 		</div>
@@ -24,7 +24,7 @@
 			<%= text_field_tag 'subject','', "placeholder"=> 'Subject', 'data-required'=>'true'%>
 		</div>
 		<div class="control">
-			<%= text_field_tag 'message','', "placeholder"=> 'Message', 'data-required'=>'true'%>
+			<%= text_area_tag 'message','', "placeholder"=> 'Message', 'data-required'=>'true'%>
 		</div>
 		<div class="control">
 			<%= submit_tag 'submit', :class=>'btn btn-primary'%>

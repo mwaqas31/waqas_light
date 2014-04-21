@@ -14,5 +14,17 @@
 //= require parsley
 //= require parsley.extend
 //= require jquery_ujs
+//= short_text_pl
 //= require turbolinks
 //= require_tree .
+
+/*
+ * jQuery Shorten plugin 1.0.0
+ *
+ * Copyright (c) 2013 Viral Patel
+ * http://viralpatel.net
+ *
+ * Dual licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+

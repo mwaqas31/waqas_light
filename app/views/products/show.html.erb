@@ -1,0 +1,44 @@
+<div class="row-fluid">
+	<div class="span2">
+		<div class="categories-container">
+			<% @categories.each do |categ|%>
+			<%= link_to categ.name,'', :class => 'btn btn-large btn-block btn-primary'%>
+
+
+			<%end%>
+
+
+		</div>
+	</div>
+
+	<div class="span10">
+		<div class="row-fluid">
+			<div class="span4">
+				<%= image_tag @product.image.url(:large)%>
+			</div>
+
+			<div class="span8">
+				<table border="0">
+					<tr>
+						<td>Name: </td>
+						<td><%= @product.name%></td>					
+					</tr>
+
+					<tr>
+						<td>Price: </td>
+						<td><%= @product.price%></td>					
+					</tr>
+
+					<tr>
+						<td>Desciption:</td>
+						<td><%= @product.description%></td>					
+					</tr>
+				</table>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
