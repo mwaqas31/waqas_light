@@ -1,10 +1,10 @@
 <div class="row-fluid">
-  <table id="line_items">
+  <table id="line_items" cellpadding="20" >
     <tr>
-      <th>Product</th>
-      <th>Qty</th>
-      <th class="price">Unit Price</th>
-      <th class="price">Full Price</th>
+      <th style="text-align: left;">Product</th>
+      <th style="text-align: left;">Qty</th>
+      <th style="text-align: left;">Unit Price</th>
+      <th style="text-align: left;">Full Price</th>
     </tr>
     <% for line_item in @line_items %>
     <tr class="<%= cycle :odd, :even %>">
@@ -23,6 +23,6 @@
 
   <p>
   <%= link_to "place more orders", root_path,:class=> 'btn btn-primary' %>
-    <%= link_to "Checkout", @cart.paypal_url(root_path) %>
+    <%= link_to "Checkout", @cart.paypal_url(root_path),:class => 'btn btn-success' %>
   </p>
 </div>
