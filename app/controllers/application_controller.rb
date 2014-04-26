@@ -13,7 +13,13 @@ class ApplicationController < ActionController::Base
   	end
   end
 
-  	def required_login
-  		redirect_to root_path and return if current_user.blank?
-  	end
+  def required_login
+    redirect_to root_path and return if current_user.blank?
   end
+
+  
+  def current_cart
+    session[:cart_id] ||= Cart.create!.id
+    @current_cart ||= Cart.find(session[:cart_id])
+  end
+end

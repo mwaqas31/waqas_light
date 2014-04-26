@@ -4,7 +4,6 @@
 			<% @categories.each do |categ|%>
 			<%= link_to categ.name,'', :class => 'btn btn-large btn-block btn-primary'%>
 
-
 			<%end%>
 
 
@@ -34,11 +33,12 @@
 						<td><%= @product.description%></td>					
 					</tr>
 				</table>
-
+				<p >	<%= link_to "Add To Cart", line_items_path(:product_id => @product),:class=>'btn btn-success'%>
+				</p>
 			</div>
 
 		</div>
-
 	</div>
-
 </div>
+
+
