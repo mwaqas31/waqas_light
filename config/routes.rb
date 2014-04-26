@@ -12,7 +12,7 @@ WaqasLight::Application.routes.draw do
 	resources :carts, :only => [:index]
 	get 'current_cart',to: 'carts#show',as: 'current_cart'
 
-	resources :line_items, :only=> [:create]
+	get :line_items, :to => 'line_items#create',as: 'line_items'
 	namespace :admin do
 		resources :session, :only => [:new,:destroy,:create]
 		resources :products
