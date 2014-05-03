@@ -2,6 +2,8 @@ WaqasLight::Application.routes.draw do
 
 
 
+  
+  
 	root :to => "main#index"
 	get "about-us",to: 'main#about_us' , as: 'about_us'
 	get "contact-us",to: 'main#contact_us' , as: 'contact_us'
@@ -17,6 +19,7 @@ WaqasLight::Application.routes.draw do
 		resources :session, :only => [:new,:destroy,:create]
 		resources :products
 		resources :categories
+		resources :contactors, :only => [:index]
 	end
 
 

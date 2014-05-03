@@ -13,7 +13,7 @@ class Admin::CategoriesController < ApplicationController
 
 	def update
 		@category = Category.find(params[:id])
-		@category.update_attributes(params[:category])
+		@category.update_attributes(category_params)
 		flash[:success] = 'Updated successfully'
 		redirect_to admin_categories_path
 

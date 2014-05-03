@@ -2,7 +2,7 @@
  	$.fn.shorten = function (settings) {
 
  		var config = {
- 			showChars: 100,
+ 			showChars: 10,
  			ellipsesText: "...",
  			moreText: "more",
  			lessText: "less"

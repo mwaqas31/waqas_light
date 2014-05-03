@@ -1,0 +1,32 @@
+<h1>Admin::Contactors#index</h1>
+<p>Find me in app/views/admin/contactors/index.html.erb</p>
+
+<table border="1px;">
+	<tr>
+		<td style="width: 100px;"><strong>Name</strong></td>
+		<td style="width: 100px;"><strong>Email</strong></td>
+		<td style="width: 100px;"><strong>Subject</strong></td>
+		<td style="width: 100px;"><strong>Message</strong></td>
+	</tr>
+
+	<%@contactors.each  do |contactor|%>
+	<tr>
+		<td style="width: 100px;">
+			<%= contactor.name%>
+		</td>
+
+		<td style="width: 100px;">
+			<%= contactor.email%>
+		</td>
+
+		<td style="width: 100px;">
+			<%=contactor.subject%>
+		</td>
+
+		<td style="width: 100px;">
+		<%=contactor.message%>
+		</td>
+
+		<%end%>
+	</tr>
+</table>
