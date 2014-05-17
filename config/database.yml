@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 
 development:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   database: lighting_db
@@ -24,10 +24,10 @@ test:
   pool: 5
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
-  database: lighting_production_db
-  username: root
-  password: pucit
-  pool: 5
+  database: enliteni_production_db
+  username: enliteni_root
+  password: Pioneer&Shef11
+  pool: 10

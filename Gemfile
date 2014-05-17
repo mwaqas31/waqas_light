@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
+#gem 'sqlite3'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 1.2'
 	
   gem 'bootstrap-sass', '2.3.2.0'
 
-
+gem 'rails_12factor', group: :production
 
 group :development do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -41,7 +41,7 @@ end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem 'sdoc'
 end
 
 
@@ -56,3 +56,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+ruby '2.0.0'
